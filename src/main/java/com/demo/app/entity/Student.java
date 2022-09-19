@@ -47,7 +47,7 @@ public class Student implements Serializable {
     private String hobby;
 
     @ApiModelProperty("描述")
-    private String desc;
+    private String description;
 
 
 }
