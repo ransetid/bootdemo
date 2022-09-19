@@ -28,6 +28,14 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.2</version>
         </dependency>
+        <!--Mybatis Plus多数据源-->
+        <!-- https://mvnrepository.com/artifact/com.baomidou/dynamic-datasource-spring-boot-starter -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>3.5.2</version>
+        </dependency>
+
 
         <!--阿里开源数据库连接池-->
         <dependency>
@@ -52,11 +60,11 @@
         </dependency>
 
         <!--数据库驱动-->
-        <!--<dependency>-->
-        <!--    <groupId>mysql</groupId>-->
-        <!--    <artifactId>mysql-connector-java</artifactId>-->
-        <!--    <scope>runtime</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>

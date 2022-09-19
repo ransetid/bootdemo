@@ -7,11 +7,6 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
   datasource:
-    # MySql
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://127.0.0.1:5432/bootdemopg
-    username: postgres
-    password: admin
     druid:
       # MySql、PostgreSQL、SqlServer校验
       validation-query: select 1
@@ -30,25 +25,42 @@ spring:
       stat-view-servlet:
         enabled: true
         login-username: xgblack
-        login-password: C@sm9202.
+        login-password: xgblack...
       web-stat-filter:
         enabled: true
         url-pattern: /*
         exclusions: '*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*'
         session-stat-enable: true
         session-stat-max-count: 10
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      datasource:
+        master:
+          # MySql
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/bootdemo?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+          username: root
+          password: admin
+        slave_1:
+          # PostgreSQL
+          driver-class-name: org.postgresql.Driver
+          url: jdbc:postgresql://127.0.0.1:5432/bootdemopg
+          username: postgres
+          password: admin
+
 
 # 日志配置
 logging:
   level:
-    com.casm: debug
+    com.demo: debug
     org.springframework: warn
     com.baomidou.example.mapper: debug
 
 #mybatis-plus配置
 # mybatis
 mybatis-plus:
-  mapper-locations: classpath:com/casm/**/mapper/*Mapper.xml
+  mapper-locations: classpath:com/demo/**/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
   #  typeAliasesPackage: org.springblade.**.entity
   #typeEnumsPackage: org.springblade.dashboard.entity.enums
