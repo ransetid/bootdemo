@@ -2,4 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demo.app.mapper.DogMapper">
 
+    <select id="selectDogList" resultType="com.demo.app.entity.Dog">
+        SELECT * FROM animal.dog
+    </select>
+
 </mapper>

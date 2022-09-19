@@ -3,6 +3,8 @@ package com.demo.app.mapper;
 import com.demo.app.entity.Dog;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.util.List;
+
 /**
  * <p>
  *  Mapper 接口
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface DogMapper extends BaseMapper<Dog> {
 
+    List<Dog> selectDogList();
 }

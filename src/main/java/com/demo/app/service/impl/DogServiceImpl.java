@@ -7,6 +7,9 @@ import com.demo.app.service.IDogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -19,4 +22,11 @@ import org.springframework.stereotype.Service;
 @DS("slave_1") // 指定从 slave_1 数据源读取
 public class DogServiceImpl extends ServiceImpl<DogMapper, Dog> implements IDogService {
 
+    @Resource
+    private DogMapper dogMapper;
+
+    @Override
+    public List<Dog> getDogList() {
+        return dogMapper.selectDogList();
+    }
 }

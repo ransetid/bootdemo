@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+//配置Mapper扫描路径
 @MapperScan("com.demo.**.mapper")
 public class BootDemoApplication {
 

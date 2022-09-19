@@ -1,7 +1,9 @@
 package com.demo.app.service;
 
-import com.demo.app.entity.Dog;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.demo.app.entity.Dog;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2022-09-19
  */
 public interface IDogService extends IService<Dog> {
+
+    List<Dog> getDogList();
 
 }
