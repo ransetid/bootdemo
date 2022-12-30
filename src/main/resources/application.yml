@@ -40,15 +40,15 @@ spring:
         master:
           # MySql
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://127.0.0.1:3306/bootdemo?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+          url: jdbc:mysql://127.0.0.1:3306/stu0923?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
           username: root
-          password: admin
+          password: 123456
         slave_1:
           # PostgreSQL
           driver-class-name: org.postgresql.Driver
-          url: jdbc:postgresql://127.0.0.1:5432/bootdemopg
+          url: jdbc:postgresql://127.0.0.1:5432/dog
           username: postgres
-          password: admin
+          password: 123456
 
 
 # 日志配置

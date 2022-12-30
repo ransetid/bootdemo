@@ -5,7 +5,7 @@
  Source Server Type    : PostgreSQL
  Source Server Version : 120009
  Source Host           : localhost:5432
- Source Catalog        : bootdemopg
+ Source Catalog        : dog
  Source Schema         : animal
 
  Target Server Type    : PostgreSQL

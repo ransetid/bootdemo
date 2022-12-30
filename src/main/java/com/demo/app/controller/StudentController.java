@@ -21,7 +21,7 @@ import java.util.List;
  * @author xgblack
  * @since 2022-09-19
  */
-@RestController
+@RestController //返回的东西都会生成一个json对象返回给前端
 @RequestMapping("/app/student")
 @Api(value = "学生数据", tags = "学生数据接口")
 public class StudentController {

@@ -1,5 +1,6 @@
 package com.demo.app.mapper;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.demo.app.entity.Dog;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -15,5 +16,6 @@ import java.util.List;
  */
 public interface DogMapper extends BaseMapper<Dog> {
 
+    @DS("slave_1")
     List<Dog> selectDogList();
 }
